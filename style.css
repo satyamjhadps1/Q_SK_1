@@ -1,0 +1,327 @@
+#score {
+  margin-left: 5px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+#timer {
+  float: right;
+  margin-right: 5px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #003153;
+}
+
+h1 {
+  background-color: steelblue;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+#show_sketch {
+  float: right;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+#sketch_to_be_drawn {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  color: white;
+  margin: 5%;
+}
+
+/* CSS */
+.bton {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2;
+}
+
+.bton::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17C3B2;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.bton:hover::before {
+  width: 105%;
+}
+
+.bton:hover {
+  color: #111;
+}
+
+
+#m {
+  height: 100%;
+  background-color: #212121;
+}
+
+#your_sketch,
+#confidence {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.9s;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: slidein-right;
+  -webkit-animation-name: slidein-right;
+}
+
+#timer {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 5px;
+  transition: 0.9s;
+  animation-duration: 3s;
+  animation-name: left;
+}
+
+#score {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 5px;
+  transition: 0.9s;
+  animation-duration: 3s;
+  animation-name: left_to_right;
+}
+
+.h {
+  color: white;
+  display: inline;
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: slidein-right;
+  -webkit-animation-name: slidein-right;
+}
+
+@-moz-keyframes slidein-right {
+  from {
+    margin-right: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein-right {
+  from {
+    margin-right: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes left_to_right {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes left {
+  from {
+    margin-left: 100px;
+  }
+
+  to {
+    margin-left: 0px;
+  }
+}
+
+.bt {
+  padding: 5px;
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 0;
+  font-family: inherit;
+  color: white;
+  margin-top: 50px;
+}
+
+.bt::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: white;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.bt:hover::before {
+  width: 100%;
+}
+
+.bt:hover {
+  color: #111;
+}
+
+.header {
+  font-variant: small-caps;
+  font-size: 55px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.s-header {
+  font-variant: small-caps;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#quit-btn {
+  float: left;
+  margin-left: 950px;
+  margin-top: 20px;
+  border: 2px solid red;
+  color: red;
+}
+
+#quit-btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: red;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+#quit-btn:hover:before {
+  width: 100%;
+}
+
+#quit-btn:hover {
+  color: white;
+}
+
+
+canvas {
+  animation-name: ex;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  margin-top: 280px;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+
+@keyframes ex {
+  10% {
+    box-shadow: 1px 20px 20px orange
+  }
+
+  30% {
+    box-shadow: 2px 15px 15px yellow;
+  }
+
+  60% {
+    box-shadow: 3px 21px 21px rgb(248, 83, 83);
+  }
+
+  90% {
+    box-shadow: 3.5px 21px 21px rosybrown;
+  }
+
+  100% {
+    box-shadow: 4px 22px 22px rgb(137, 252, 175);
+  }
+}
+
+.gg {
+  color: white;
+  font-variant: small-caps;
+}
+
+.btnoo {
+  padding: 5px;
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 0;
+  font-family: inherit;
+  color: white;
+  margin-top: 50px;
+}
+
+.btnoo::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: white;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.btnoo:hover::before {
+  width: 100%;
+}
+
+.btnoo:hover {
+  color: #111;
+}
+
+#inp_color {
+  width: 25%;
+}
